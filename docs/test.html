@@ -1,238 +1,480 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
+<html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <meta name="author" content="Henrique Veras" />
-  <title>ECON 253</title>
-  <style type="text/css">
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-              </style>
-  <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-  <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
-  <script src="site_libs/slidy-2/scripts/slidy.js"></script>
-  <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Henrique Veras" />
+
+
+<title>ECON 253</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
 </head>
+
 <body>
-<div class="slide titlepage">
-  <h1 class="title">ECON 253</h1>
-  <p class="author">
-Henrique Veras
-  </p>
-</div>
-<div id="asymmetric-information-and-adverse-selection" class="title-slide slide section level1">
-<h1>Asymmetric Information and Adverse Selection</h1>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ECON 253</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="test.html">Lecture Notes</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">ECON 253</h1>
+<h4 class="author">Henrique Veras</h4>
 
 </div>
-<div id="a-question" class="slide section level2">
-<h1>A Question</h1>
+
+
+<div id="asymmetric-information-and-adverse-selection" class="section level1">
+<h1>Asymmetric Information and Adverse Selection</h1>
+<div id="a-question" class="section level2">
+<h2>A Question</h2>
 <p>At some urban universities, many students and faculty eat at lunch trucks that are parked along the streets surrounding the campus. Before going there for lunch one day, you ask two people where you should eat. Neither individual you ask has ever been there. One says, “Just pick the one with the shortest line.” The other says, “Pick the one with the longest line.” Which advice should you follow?</p>
 </div>
-<div id="introduction" class="slide section level2">
-<h1>Introduction</h1>
-<ul class="incremental">
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<ul>
 <li>Today we’ll discuss the issue of Asymmetric Information in Economics</li>
 <li>So far, all the models and market structures that we discussed consider that information (eve when missing!) is equally shared among all agents.
-<ul class="incremental">
+<ul>
 <li>Prices in Perfect Competition</li>
 <li>Payoffs in Prisoner’s dilemma, etc.</li>
 </ul></li>
 </ul>
 </div>
-<div id="example" class="slide section level2">
-<h1>Example</h1>
-<ul class="incremental">
+<div id="example" class="section level2">
+<h2>Example</h2>
+<ul>
 <li>Why do people accept working in dangerous jobs?
-<ul class="incremental">
+<ul>
 <li>Higher wages to compensate risk?</li>
 </ul></li>
 <li>Evidence of wage differentials across industries</li>
 <li>However we do not see differences across firms in the same industry.
-<ul class="incremental">
+<ul>
 <li>Prospective employees often do not know the injury rates at individual firms but may know the <strong>average</strong> injury rate over an entire industry.</li>
 </ul></li>
 </ul>
 </div>
-<div id="problems-due-to-asymmetric-information" class="slide section level2">
-<h1>Problems Due to Asymmetric Information</h1>
-<ul class="incremental">
+<div id="problems-due-to-asymmetric-information" class="section level2">
+<h2>Problems Due to Asymmetric Information</h2>
+<ul>
 <li><strong>Hidden characteristic</strong> is an attribute of a person or thing that is known to one party but not to others
-<ul class="incremental">
+<ul>
 <li>Adverse selection</li>
 </ul></li>
 <li><strong>Hidden action</strong> is an act by one party to a transaction that is known to one party but not to others
-<ul class="incremental">
+<ul>
 <li>Moral Hazard</li>
 </ul></li>
 </ul>
 </div>
-<div id="adverse-selection" class="slide section level2">
-<h1>Adverse selection</h1>
-<ul class="incremental">
+<div id="adverse-selection" class="section level2">
+<h2>Adverse selection</h2>
+<ul>
 <li>Opportunism characterized by an informed person’s benefitting from trading with a less-informed person who doesn’t know about an <strong>unobserved characteristic</strong> of the informed person.</li>
 <li>Examples?
-<ul class="incremental">
+<ul>
 <li>People who buy life insurance policies are better informed about their own health than insurance companies are.</li>
 <li>What else?</li>
 </ul></li>
 </ul>
 </div>
-<div id="moral-hazard" class="slide section level2">
-<h1>Moral Hazard</h1>
-<ul class="incremental">
+<div id="moral-hazard" class="section level2">
+<h2>Moral Hazard</h2>
+<ul>
 <li>Opportunism characterized by an informed person’s taking advantage of a less-informed person through an <strong>unobserved action</strong>.</li>
 <li>Examples?
-<ul class="incremental">
+<ul>
 <li>Insured people may engage in risky behaviors that increase the probability of claims against the insurance company.</li>
 <li>What else?</li>
 </ul></li>
 </ul>
 </div>
-<div id="an-example-of-adverse-selection-if-he-wants-to-sell-that-horse-do-i-really-want-to-buy-it" class="slide section level2">
-<h1>An Example of Adverse Selection | “If he wants to <em>sell</em> that horse, do I really want to <em>buy</em> it?”</h1>
-<ul class="incremental">
+<div id="an-example-of-adverse-selection-if-he-wants-to-sell-that-horse-do-i-really-want-to-buy-it" class="section level2">
+<h2>An Example of Adverse Selection | “If he wants to <em>sell</em> that horse, do I really want to <em>buy</em> it?”</h2>
+<ul>
 <li>Let’s focus on the issue of adverse selection now.</li>
 <li>Consider the market for used cars.</li>
 </ul>
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/corolla-new-old.png" /></p>
 </div>
-<div id="the-market-for-lemons" class="slide section level2">
-<h1>The Market for Lemons</h1>
-<ul class="incremental">
+<div id="the-market-for-lemons" class="section level2">
+<h2>The Market for Lemons</h2>
+<ul>
 <li>There are two types of cars in the market: low-quality (L) and high-quality (H).</li>
 <li>Assume a large number of potential buyers
-<ul class="incremental">
+<ul>
 <li>Willingness to pay:
-<ul class="incremental">
+<ul>
 <li>$4,000 (L)</li>
 <li>$8,000 (H)</li>
 </ul></li>
 </ul></li>
 <li>Assume 2000 sellers:
-<ul class="incremental">
+<ul>
 <li>1000 owners of L cars
-<ul class="incremental">
+<ul>
 <li><em>Reservation price</em>: $3,000</li>
 </ul></li>
 <li>1000 owners of H cars
-<ul class="incremental">
+<ul>
 <li><em>Reservation price</em>: $5,000</li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
-<div id="market-equilibrium-with-symmetric-information" class="slide section level2">
-<h1>Market Equilibrium with Symmetric Information</h1>
-<ul class="incremental">
+<div id="market-equilibrium-with-symmetric-information" class="section level2">
+<h2>Market Equilibrium with Symmetric Information</h2>
+<ul>
 <li>Situation 1: Buyers and sellers have full information</li>
 </ul>
-<p><img src="test_files/figure-slidy/ggplot2-1.png" width="50%" /><img src="test_files/figure-slidy/ggplot2-2.png" width="50%" /></p>
-<ul class="incremental">
+<p><img src="test_files/figure-html/ggplot2-1.png" width="50%" /><img src="test_files/figure-html/ggplot2-2.png" width="50%" /></p>
+<ul>
 <li>Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\(P_L = 4,000\)</span> and <span class="math inline">\(P_H = 8,000\)</span></li>
 </ul></li>
 </ul>
 </div>
-<div id="market-equilibrium-with-symmetric-information-1" class="slide section level2">
-<h1>Market Equilibrium with Symmetric Information</h1>
-<ul class="incremental">
+<div id="market-equilibrium-with-symmetric-information-1" class="section level2">
+<h2>Market Equilibrium with Symmetric Information</h2>
+<ul>
 <li>Situation 2: Buyers and sellers have limited information</li>
 <li>If buyers and sellers do not know the quality of the cars, all cars will be sold for the <strong>same</strong> price.</li>
 <li>Assume <strong>risk neutrality</strong>.</li>
 </ul>
 </div>
-<div id="a-detour-into-the-risk-neutrality-assumption" class="slide section level2">
-<h1>A Detour Into the Risk Neutrality Assumption</h1>
-<ul class="incremental">
+<div id="a-detour-into-the-risk-neutrality-assumption" class="section level2">
+<h2>A Detour Into the Risk Neutrality Assumption</h2>
+<ul>
 <li>Suppose you are given two options:
-<ul class="incremental">
+<ul>
 <li>$100 with certainty</li>
 <li>A lottery with 50% of chance of receiving $200 and 50% of chance of receiving $0.
-<ul class="incremental">
+<ul>
 <li>Expected value is <span class="math inline">\((\$200 \times 0.5) + (\$0 \times 0.5) = \$100\)</span></li>
 </ul></li>
 </ul></li>
 <li>Which one do you prefer?
-<ul class="incremental">
+<ul>
 <li><strong>Risk averse</strong>: Choose the $100</li>
 <li><strong>Risk lover (taker)</strong>: Choose the lottery</li>
 <li><strong>Risk neutral</strong>: Indifferent</li>
 </ul></li>
 </ul>
 </div>
-<div id="back-to-the-equilibrium" class="slide section level2">
-<h1>Back to the Equilibrium</h1>
-<ul class="incremental">
+<div id="back-to-the-equilibrium" class="section level2">
+<h2>Back to the Equilibrium</h2>
+<ul>
 <li>Situation 2: Buyers and sellers have limited information</li>
 <li>If buyers and sellers do not know the quality of the cars, all cars will be sold for the <strong>same</strong> price.</li>
 <li>Assume <strong>risk neutrality</strong>.</li>
 <li>Then, buyers will be willing to pay <em>at most</em>:
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\((\$4,000 \times 0.5) + (\$8,000 \times 0.5) = \$6,000\)</span></li>
 </ul></li>
 <li>Sellers will be willing to accept <em>at least</em>
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\((\$3,000 \times 0.5) + (\$5,000 \times 0.5) = \$4,000\)</span></li>
 </ul></li>
 <li>Since sellers also do not know the value of their cars, they accept the deal.</li>
 <li>Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\(P_L = P_H = P = \$6,000\)</span></li>
 </ul></li>
 </ul>
 </div>
-<div id="graphical-solution" class="slide section level2">
-<h1>Graphical Solution</h1>
-<p><img src="test_files/figure-slidy/unnamed-chunk-1-1.png" width="50%" /><img src="test_files/figure-slidy/unnamed-chunk-1-2.png" width="50%" /></p>
+<div id="graphical-solution" class="section level2">
+<h2>Graphical Solution</h2>
+<p><img src="test_files/figure-html/unnamed-chunk-1-1.png" width="50%" /><img src="test_files/figure-html/unnamed-chunk-1-2.png" width="50%" /></p>
 </div>
-<div id="market-equilibrium-with-asymmetric-information" class="slide section level2">
-<h1>Market Equilibrium with Asymmetric Information</h1>
-<ul class="incremental">
+<div id="market-equilibrium-with-asymmetric-information" class="section level2">
+<h2>Market Equilibrium with Asymmetric Information</h2>
+<ul>
 <li>Now let’s assume that sellers know the quality of their cars but buyers do not.</li>
 <li>In this example, Expected willingness to pay is higher than willingness to accept in both markets.</li>
 <li>Equilibrium is the same as before:
-<ul class="incremental">
+<ul>
 <li>2,000 cars are sold (1,000 H and 1,000 L)</li>
 <li><span class="math inline">\(P_L = P_H = P = \$6,000\)</span></li>
 </ul></li>
 </ul>
 </div>
-<div id="market-equilibrium-with-asymmetric-information-1" class="slide section level2">
-<h1>Market Equilibrium with Asymmetric Information</h1>
-<ul class="incremental">
+<div id="market-equilibrium-with-asymmetric-information-1" class="section level2">
+<h2>Market Equilibrium with Asymmetric Information</h2>
+<ul>
 <li>Now consider a more interesting case:
-<ul class="incremental">
+<ul>
 <li>Same numbers as before but the <em>reservation price</em> of the high quality car owners is $7,000.</li>
 </ul></li>
 <li>What changes?
-<ul class="incremental">
+<ul>
 <li>Only L car owners will be willing to sell!</li>
 <li>Buyers will notice that H car owners will be driven out of the market</li>
 </ul></li>
 <li>Equilibrium:
-<ul class="incremental">
+<ul>
 <li>1,000 cars are sold (0 H and 1,000 L)</li>
 <li><span class="math inline">\(P_L = \$4,000\)</span></li>
 </ul></li>
 <li>This equilibrium is <strong>inefficient</strong> because potential buyers value H cars more than current owners!</li>
 </ul>
 </div>
-<div id="george-akerlof" class="slide section level2">
-<h1>George Akerlof</h1>
+<div id="george-akerlof" class="section level2">
+<h2>George Akerlof</h2>
 <div class="columns-2">
-<ul class="incremental">
+<ul>
 <li><p><font size="2">This simple example is based on a paper published by George Akerlof in the Quarterly Journal of Economics (QJE), in 1970.</font></p></li>
 <li><p><font size="2">Before being accepted at QJE, Akerlof faced some rejections along the way:</font></p>
-<ul class="incremental">
+<ul>
 <li><font size="2">AER and RESTUD "<em>did not publish papers on topics of such triviality.</em></font></li>
 <li><font size="2">JPE: <em>if this paper was correct, economics would be different.</em></font></li>
 </ul></li>
@@ -240,176 +482,176 @@ Henrique Veras
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-paper.gif" /></p>
 </div>
 </div>
-<div id="example-1" class="slide section level2">
-<h1>Example</h1>
-<ul class="incremental">
+<div id="example-1" class="section level2">
+<h2>Example</h2>
+<ul>
 <li>The figure below shows the market for (used and new) cars in a given town. Suppose that there are 1,000 car owners (10% used and 90% new).</li>
 </ul>
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-example.png" style="width:40.0%" /></p>
-<ul class="incremental">
+<ul>
 <li>What are price and equilibrium quantities with symmetric (full) information?</li>
 <li>What are price and equilibrium quantities with symmetric (incomplete) information?</li>
 <li>What are price and equilibrium quantities with asymmetric information?</li>
 </ul>
 </div>
-<div id="example-2" class="slide section level2">
-<h1>Example 2</h1>
-<ul class="incremental">
+<div id="example-2" class="section level2">
+<h2>Example 2</h2>
+<ul>
 <li>Now assume that there are 1,000 car owners (90% used and 10% new).</li>
 </ul>
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-example.png" style="width:40.0%" /></p>
-<ul class="incremental">
+<ul>
 <li>What are price and equilibrium quantities with symmetric (full) information?</li>
 <li>What are price and equilibrium quantities with symmetric (incomplete) information?</li>
 <li>What are price and equilibrium quantities with asymmetric information?</li>
 </ul>
 </div>
-<div id="reducing-adverse-selection" class="slide section level2">
-<h1>Reducing Adverse Selection</h1>
-<ul class="incremental">
+<div id="reducing-adverse-selection" class="section level2">
+<h2>Reducing Adverse Selection</h2>
+<ul>
 <li>An uninformed person may engage in <strong>screening</strong> to determine information held by informed people (e.g. test-driving a car)</li>
 <li>Signaling: An informed party may engage in <strong>signaling</strong> to send information to a less-informed person (e.g. firm distributing favorable report on its product by an independent testing agency, warranty, etc.)</li>
 <li>Some organizations publish expert <strong>third-party information</strong> about brands (e.g. Consumer Reports)</li>
 </ul>
 </div>
-<div id="laws-and-policies-to-prevent-opportunism" class="slide section level2">
-<h1>Laws and Policies to Prevent Opportunism</h1>
-<ul class="incremental">
+<div id="laws-and-policies-to-prevent-opportunism" class="section level2">
+<h2>Laws and Policies to Prevent Opportunism</h2>
+<ul>
 <li>Disclosure laws
-<ul class="incremental">
+<ul>
 <li>Governments can require informed parties to disclose relevant information</li>
 </ul></li>
 <li>Product liability laws
-<ul class="incremental">
+<ul>
 <li>laws prevent consumers from being stuck with nonfunctional or dangerous products</li>
 </ul></li>
 <li>Universal coverage:
-<ul class="incremental">
+<ul>
 <li>Eliminate adverse selection in health insurance markets by government provision of health care to everyone</li>
 </ul></li>
 </ul>
 </div>
-<div id="labor-market-applications" class="slide section level2">
-<h1>Labor Market Applications</h1>
-<ul class="incremental">
+<div id="labor-market-applications" class="section level2">
+<h2>Labor Market Applications</h2>
+<ul>
 <li>What kinds of asymmetric information problems plague labor markets?
-<ul class="incremental">
+<ul>
 <li>Prospective employees may have less information than firms do about working conditions.</li>
 <li>Firms may have less information about potential employees’ abilities than potential workers do.</li>
 </ul></li>
 <li>We’ll see how signaling and screening can affect (positively or negatively) the welfare in labor markets.</li>
 </ul>
 </div>
-<div id="cheap-talk" class="slide section level2">
-<h1>Cheap Talk</h1>
-<ul class="incremental">
+<div id="cheap-talk" class="section level2">
+<h2>Cheap Talk</h2>
+<ul>
 <li><p>Cheap talk is a relatively cheap way to signal one’s ability (writing some skill level on a C.V, for instance).</p></li>
 <li><p>Cyndi knows her ability (high or low) and the firm wants to match her ability to the level of ability demanded on the job.</p></li>
 </ul>
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/cheap_talk_work.png" style="width:50.0%" /></p>
 </div>
-<div id="cheap-talk-1" class="slide section level2">
-<h1>Cheap Talk</h1>
+<div id="cheap-talk-1" class="section level2">
+<h2>Cheap Talk</h2>
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/cheap_talk_not_work.png" style="width:50.0%" /></p>
-<ul class="incremental">
+<ul>
 <li>In the second case, the firm knows Cindy’s incentives and does not believe her cheap talk.
-<ul class="incremental">
+<ul>
 <li>Instead, they calculate an expected payoff of <span class="math inline">\(0.5\times 1 + 0.5\times 4 = 2.5\)</span> for the undemanding job and <span class="math inline">\(0.5\times 2+ 0.5\times 1 = 1.5\)</span> for the demanding job.</li>
 </ul></li>
 <li>The outcome is inefficient if Cindy is high ability!</li>
 </ul>
 </div>
-<div id="spences-signaling-model" class="slide section level2">
-<h1>Spence’s Signaling Model</h1>
-<ul class="incremental">
+<div id="spences-signaling-model" class="section level2">
+<h2>Spence’s Signaling Model</h2>
+<ul>
 <li>When cheap talk does not work, workers need to send a more expensive signal to be believed: a degree!</li>
 <li>Assumptions of the signaling model:
-<ul class="incremental">
+<ul>
 <li>Schooling provides no useful training and only serves as a signal (don’t worry, this is an unrealistic assumption - I hope!!).</li>
 <li>H workers are <span class="math inline">\(\theta\)</span> share of the workforce; L workers are <span class="math inline">\(1-\theta\)</span> share.</li>
 <li>H workers are worth <span class="math inline">\(w_h\)</span> to the firm; L workers are worth <span class="math inline">\(w_l\)</span> and will pay workers these marginal products.</li>
 </ul></li>
 </ul>
 </div>
-<div id="spences-signaling-model-1" class="slide section level2">
-<h1>Spence’s Signaling Model</h1>
-<ul class="incremental">
+<div id="spences-signaling-model-1" class="section level2">
+<h2>Spence’s Signaling Model</h2>
+<ul>
 <li>Two types of equilibria arise:
-<ul class="incremental">
+<ul>
 <li>Pooling equilibrium: dissimilar people are paid alike or behave alike.</li>
 <li>Separating equilibrium: dissimilar people are paid differently and behave differently</li>
 </ul></li>
 </ul>
 </div>
-<div id="separating-equilibrium" class="slide section level2">
-<h1>Separating Equilibrium</h1>
-<ul class="incremental">
+<div id="separating-equilibrium" class="section level2">
+<h2>Separating Equilibrium</h2>
+<ul>
 <li>If <span class="math inline">\(w_h - c &gt; w_l\)</span>, it is advantageous to H workers to pay the cost of education and signal their ability.</li>
 <li>Then, in equilibrium:
-<ul class="incremental">
+<ul>
 <li>H workers payoff is <span class="math inline">\(w_h - c\)</span></li>
 <li>L workers payoff is <span class="math inline">\(w_l\)</span>.</li>
 <li>Firms break even because they pay the worker’s productivity</li>
 </ul></li>
 </ul>
 </div>
-<div id="pooling-equilibrium" class="slide section level2">
-<h1>Pooling Equilibrium</h1>
-<ul class="incremental">
+<div id="pooling-equilibrium" class="section level2">
+<h2>Pooling Equilibrium</h2>
+<ul>
 <li>What are the conditions for the existence of a pooling equilibrium?</li>
 <li>Firms pay workers the expected marginal product:
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\(\bar{w}=\theta w_h+(1-\theta)w_l\)</span></li>
 </ul></li>
 <li>Then, the pooling equilibrium occurs if
-<ul class="incremental">
+<ul>
 <li><span class="math inline">\(w_h-c&lt;\bar{w}\)</span></li>
 </ul></li>
 <li>Equilibrium outcome
-<ul class="incremental">
+<ul>
 <li>Both H and L workers receive <span class="math inline">\(\bar{w}\)</span></li>
 <li>Firms break even (gains of paying lower wages to H are compensated by higher wages to L)</li>
 </ul></li>
 </ul>
 </div>
-<div id="examples" class="slide section level2">
-<h1>Examples</h1>
-<ul class="incremental">
+<div id="examples" class="section level2">
+<h2>Examples</h2>
+<ul>
 <li>Suppose <span class="math inline">\(w_h=\$40,000\)</span>, <span class="math inline">\(w_l=\$20,000\)</span>, <span class="math inline">\(c=\$15,000\)</span>.</li>
 <li>Which type of equilibrium is possible?</li>
 </ul>
 </div>
-<div id="screening-in-hiring" class="slide section level2">
-<h1>Screening in Hiring</h1>
-<ul class="incremental">
+<div id="screening-in-hiring" class="section level2">
+<h2>Screening in Hiring</h2>
+<ul>
 <li>Firms screen prospective workers in various ways:
-<ul class="incremental">
+<ul>
 <li>Based on <strong>observable</strong> characteristics believed to be correlated with ability
-<ul class="incremental">
+<ul>
 <li>Examples?</li>
 </ul></li>
 <li>Based on performance on a test, which may or may not accurately measure skills required on the job.</li>
 </ul></li>
 </ul>
 </div>
-<div id="statistical-discrimination" class="slide section level2">
-<h1>Statistical Discrimination</h1>
-<ul class="incremental">
+<div id="statistical-discrimination" class="section level2">
+<h2>Statistical Discrimination</h2>
+<ul>
 <li>Some employers engage in <em>statistical discrimination</em>.
-<ul class="incremental">
+<ul>
 <li>Hiring based on the belief that people of a certain age, gender, race, religion, or ethnicity have a higher ability than others on average.</li>
 </ul></li>
 <li>Statistical discrimination is “efficient”, from a purely economic standpoint, but it is often unlawful.
-<ul class="incremental">
+<ul>
 <li>In the U.S., it is illegal in to make hiring, pay, or promotion decisions using a performance prediction that is based on race, sex, age or disability.</li>
 </ul></li>
 <li>Statistical discrimination is difficult to detect, however, and so it is plausible that it occurs frequently despite the law.</li>
 </ul>
 </div>
-<div id="empirical-evidence-for-discrimination-in-the-labor-market" class="slide section level2">
-<h1>Empirical Evidence for Discrimination in the Labor Market</h1>
+<div id="empirical-evidence-for-discrimination-in-the-labor-market" class="section level2">
+<h2>Empirical Evidence for Discrimination in the Labor Market</h2>
 <div class="columns-2">
-<ul class="incremental">
+<ul>
 <li><font size="2">In order to answer the question of whether there is racial labor market discrimination, Bertrand and Mullainathan elaborate an interesting experiment:</font></li>
 <li><font size="2">Sending resumes by mail or fax to advertised job positions while manipulating perceptions of race by using distinctively ethnic names (otherwise holding constant resume characteristics)</font></li>
 <li><font size="2">The authors find that callback rates are lower for black sounding names. </font></li>
@@ -418,16 +660,52 @@ Henrique Veras
 <p><img src="/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/resumes-results.jpeg" style="width:50.0%" /></p>
 </div>
 </div>
+</div>
 
-  <!-- dynamically load mathjax for compatibility with self-contained -->
-  <script>
-    (function () {
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 </body>
 </html>
