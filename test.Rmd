@@ -4,7 +4,6 @@ author: "Henrique Veras"
 output:
   slidy_presentation: 
     incremental: true
-  html_document: default
 ---
 
 
