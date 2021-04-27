@@ -53,7 +53,7 @@ output:
 - Let's focus on the issue of adverse selection now.
 - Consider the market for used cars.
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/corolla-new-old.png)
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/corolla-new-old.png)
 
 ## The Market for Lemons
 - There are two types of cars in the market: low-quality (L) and high-quality (H).
@@ -199,13 +199,13 @@ ggplot(mapping = aes(x = x, y = y)) +
   - <font size="2">JPE: *if this paper was correct, economics would be different.*</font>
 
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-paper.gif)
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-paper.gif)
 </div>
 
 ## Example
 - The figure below shows the market for (used and new) cars in a given town. Suppose that there are 1,000 car owners (10% used and 90% new).
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-example.png){width=40%}
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
 
 - What are price and equilibrium quantities with symmetric (full) information?
 - What are price and equilibrium quantities with symmetric (incomplete) information?
@@ -214,7 +214,7 @@ ggplot(mapping = aes(x = x, y = y)) +
 ## Example 2
 - Now assume that there are 1,000 car owners (90% used and 10% new).
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/lemons-example.png){width=40%}
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
 
 - What are price and equilibrium quantities with symmetric (full) information?
 - What are price and equilibrium quantities with symmetric (incomplete) information?
@@ -245,12 +245,12 @@ ggplot(mapping = aes(x = x, y = y)) +
 
 - Cyndi knows her ability (high or low) and the firm wants to match her ability to the level of ability demanded on the job.
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/cheap_talk_work.png){width=50%}
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_work.png){width=50%}
 
 
 ## Cheap Talk
 
-  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/cheap_talk_not_work.png){width=50%}
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_not_work.png){width=50%}
 
 - In the second case, the firm knows Cindy's incentives and does not believe her cheap talk.
   - Instead, they calculate an expected payoff of $0.5\times 1 + 0.5\times 4 = 2.5$ for the undemanding job and  $0.5\times 2+ 0.5\times 1 = 1.5$ for the demanding job.
@@ -314,9 +314,9 @@ names (otherwise holding constant resume characteristics)</font>
 - <font size="2">The authors find that callback rates are lower for black sounding names. </font>
 
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/resumes.jpg){width=50%}
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes.jpg){width=50%}
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/resumes-results.jpeg){width=50%}
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes-results.jpeg){width=50%}
 </div>
 
 
