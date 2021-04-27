@@ -53,7 +53,10 @@ output:
 - Let's focus on the issue of adverse selection now.
 - Consider the market for used cars.
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/corolla-new-old.png)
+
+
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/corolla-new-old.png)
+
 
 ## The Market for Lemons
 - There are two types of cars in the market: low-quality (L) and high-quality (H).
@@ -189,23 +192,23 @@ ggplot(mapping = aes(x = x, y = y)) +
 - This equilibrium is **inefficient** because potential buyers value H cars more than current owners!
 
 ## George Akerlof
-<div class="columns-2">
 
+<div class='left' style='float:left;width:48%'>
+- This simple example is based on a paper published by George Akerlof in the Quarterly Journal of Economics (QJE), in 1970.
 
-- <font size="2">This simple example is based on a paper published by George Akerlof in the Quarterly Journal of Economics (QJE), in 1970.</font>
+- Before being accepted at QJE, Akerlof faced some rejections along the way:
+  - AER and RESTUD "*did not publish papers on topics of such triviality.*
+  - JPE: *if this paper was correct, economics would be different.*
+</div>
 
-- <font size="2">Before being accepted at QJE, Akerlof faced some rejections along the way:</font>
-  - <font size="2">AER and RESTUD "*did not publish papers on topics of such triviality.*</font>
-  - <font size="2">JPE: *if this paper was correct, economics would be different.*</font>
-
-
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-paper.gif)
+<div class='right' style='float:right;width:48%'>
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-paper.gif)
 </div>
 
 ## Example
 - The figure below shows the market for (used and new) cars in a given town. Suppose that there are 1,000 car owners (10% used and 90% new).
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
 
 - What are price and equilibrium quantities with symmetric (full) information?
 - What are price and equilibrium quantities with symmetric (incomplete) information?
@@ -214,7 +217,7 @@ ggplot(mapping = aes(x = x, y = y)) +
 ## Example 2
 - Now assume that there are 1,000 car owners (90% used and 10% new).
 
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/lemons-example.png){width=40%}
 
 - What are price and equilibrium quantities with symmetric (full) information?
 - What are price and equilibrium quantities with symmetric (incomplete) information?
@@ -240,26 +243,10 @@ ggplot(mapping = aes(x = x, y = y)) +
   - Firms may have less information about potential employees’ abilities than potential workers do.
 - We'll see how signaling and screening can affect (positively or negatively) the welfare in labor markets.
 
-## Cheap Talk
-- Cheap talk is a relatively cheap way to signal one's ability (writing some skill level on a C.V, for instance).
 
-- Cyndi knows her ability (high or low) and the firm wants to match her ability to the level of ability demanded on the job.
-
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_work.png){width=50%}
-
-
-## Cheap Talk
-
-  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_not_work.png){width=50%}
-
-- In the second case, the firm knows Cindy's incentives and does not believe her cheap talk.
-  - Instead, they calculate an expected payoff of $0.5\times 1 + 0.5\times 4 = 2.5$ for the undemanding job and  $0.5\times 2+ 0.5\times 1 = 1.5$ for the demanding job.
-- The outcome is inefficient if Cindy is high ability!
-  
-  
 ## Spence's Signaling Model
-- When cheap talk does not work, workers need to send a more expensive signal to be believed: a degree!
-- Assumptions of the signaling model:
+- Education might serve as a signal to potential employers if H workers have a lower cost of obtaining a degree.
+- Assumptions of the Signaling Model:
   - Schooling provides no useful training and only serves as a signal (don't worry, this is an unrealistic assumption - I hope!!).
   - H workers are $\theta$ share of the workforce; L workers are $1-\theta$ share.
   - H workers are worth $w_h$ to the firm; L workers are worth $w_l$ and will pay workers these marginal products.
@@ -304,23 +291,90 @@ ggplot(mapping = aes(x = x, y = y)) +
 - Statistical discrimination is difficult to detect, however, and so it is plausible that it occurs frequently despite the law.
 
 ## Empirical Evidence for Discrimination in the Labor Market
-<div class="columns-2">
-- <font size="2">In order to answer the question of whether there is racial labor
+<div class='left' style='float:left;width:48%'>
+- In order to answer the question of whether there is racial labor
 market discrimination, Bertrand and Mullainathan elaborate an interesting
-experiment:</font>
-- <font size="2">Sending resumes by mail or fax to advertised job positions while
+experiment:
+- Sending resumes by mail or fax to advertised job positions while
 manipulating perceptions of race by using distinctively ethnic
-names (otherwise holding constant resume characteristics)</font>
-- <font size="2">The authors find that callback rates are lower for black sounding names. </font>
-
-
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes.jpg){width=50%}
-
-![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes-results.jpeg){width=50%}
+names (otherwise holding constant resume characteristics)
+- The authors find that callback rates are lower for black sounding names.
 </div>
 
+<div class='right' style='float:right;width:48%'>
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes.jpg){width=50%}
+
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes-results.jpeg){width=50%}
+</div>
+
+## Wrapping up
+
+- Skip section 18.3.
+
+## Moral Hazard
+
+- The second type of inefficiency arising from asymmetric information is hidden action.
+  - Taxi driver overcharge customers by taking the longest route
 
 
+## Moral Hazard
+<div class='left' style='float:left;width:48%'>
+- Chapter 19 of the textbook is about this.
+- Focus on different types of contracts and moral hazard under different situations.
+  - Provides a formal treatment of the problem.
+- Let's disregard that and treat the issue in a more relaxed way.
+</div>
+
+<div class='right' style='float:left;width:48%'>
+
+  ![](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/drake-meme.jpeg)
+
+</div>
+
+## Principal-Agent Problem
+- In a principal-agent relationship a *principal*, such as an employer, contracts with an *agent*, such as an employee, to take some action that benefits the principal.
+  - Example: You pay someone by the hour to prepare your tax return, but don’t know whether they worked all the hours that were billed.
+    - Principal: you
+    - Agent: accountant 
+
+## Financing a project
+
+<div class='left' style='float:left;width:48%'>
+- Lenders face the risk that money borrowed will not be repaid, but lack information about the project’s success or borrower’s effort so cannot ensure that the project succeeds. 
+- To resolve the conflict of interest between the principal (lender) and the agent (borrower):
+  - Equity: the lender may require the borrower to put some of her wealth into the project
+  - Collateral: the borrower has to set aside property that will be transferred to the lender if the loan is not repaid
+</div>
+
+<div class='right' style='float:left;width:48%'>
+![](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/yesman.png){width=90%}
+</div>
+
+## Credit Rationing
+
+-Those with less wealth find it more difficult to provide equity or collateral. 
+  - Credit constrained: borrow on unfavorable terms compared with those with more wealth 
+  - Credit-excluded: are refused loans entirely 
+
+## Redlining
+
+<div class='left' style='float:left;width:48%'>
+- Ratings system to evaluate risks associated with loans to specific neighborhoods.
+- Used by:
+  - Home Owners Loan Corporation
+  - Federal Housing Administration
+  - Many private banks and companies used these maps to make their own lending and investment decisions
+</div>
+
+<div class='right' style='float:right;width:48%'>
+  ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/redlining.png){width=85%}
+</div>
+
+## That's all, Folks!
+
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/caprio.jpeg)
+
+![](https://media.giphy.com/media/UQaRUOLveyjNC/giphy.gif)
 
 
 
