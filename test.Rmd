@@ -2,10 +2,10 @@
 title: "ECON 253"
 author: "Henrique Veras"
 output:
+  slidy_presentation: 
+    incremental: true
   html_document: default
   ioslides_presentation:
-    incremental: true
-  slidy_presentation: 
     incremental: true
 ---
 
