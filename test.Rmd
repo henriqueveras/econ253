@@ -1,6 +1,7 @@
 ---
 title: "ECON 253"
 author: "Henrique Veras"
+date: "Part 17 (Chapters 18 and 19)"
 output:
   slidy_presentation: 
     incremental: true
@@ -21,6 +22,7 @@ output:
   - Payoffs in Prisoner's dilemma, etc.
 
 
+<!---
 ## Example
 
 - Why do people accept working in dangerous jobs?
@@ -28,6 +30,7 @@ output:
 - Evidence of wage differentials across industries
 - However we do not see differences across firms in the same industry.
   - Prospective employees often do not know the injury rates at individual firms but may know the **average** injury rate over an entire industry.
+-->
 
 ## Problems Due to Asymmetric Information
 
@@ -37,22 +40,16 @@ output:
   - Moral Hazard
   
 ## Adverse selection
+- Let's focus on the issue of adverse selection now.
 - Opportunism characterized by an informed person’s benefitting from trading with a less-informed person who doesn’t know about an **unobserved characteristic** of the informed person.
 - Examples?
   - People who buy life insurance policies are better informed about their own health than insurance companies are.
   - What else?
 
-## Moral Hazard
-
-- Opportunism characterized by an informed person’s taking advantage of a less-informed person through an **unobserved action**.
-- Examples?
-  - Insured people may engage in risky behaviors that increase the probability of claims against the insurance company.
-  - What else?
 
 ## An Example of Adverse Selection | “If he wants to *sell* that horse, do I really want to *buy* it?”
-- Let's focus on the issue of adverse selection now.
-- Consider the market for used cars.
 
+- Consider the market for used cars.
 
 
   ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/corolla-new-old.png)
@@ -104,12 +101,11 @@ ggplot(mapping = aes(x = x, y = y)) +
     
 ```
 
-- Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
+- Equilibrium: 2,000 cars are sold (1,000 L and 1,000 H)
   - $P_L = 4,000$ and $P_H = 8,000$
 
 ## Market Equilibrium with Symmetric Information
 - Situation 2: Buyers and sellers have limited information
-- If buyers and sellers do not know the quality of the cars, all cars will be sold for the **same** price.
 - Assume **risk neutrality**.
 
 ## A Detour Into the Risk Neutrality Assumption
@@ -124,18 +120,11 @@ ggplot(mapping = aes(x = x, y = y)) +
   - **Risk neutral**: Indifferent
   
 ## Back to the Equilibrium
-- Situation 2: Buyers and sellers have limited information
-- If buyers and sellers do not know the quality of the cars, all cars will be sold for the **same** price.
 - Assume **risk neutrality**.
 - Then, buyers will be willing to pay *at most*:
   - $(\$4,000 \times 0.5) + (\$8,000 \times 0.5) = \$6,000$
 - Sellers will be willing to accept *at least*
   - $(\$3,000 \times 0.5) + (\$5,000 \times 0.5) = \$4,000$
-- Since sellers also do not know the value of their cars, they accept the deal.
-- Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
-  - $P_L = P_H = P = \$6,000$
-
-
 
 ## Graphical Solution
 
@@ -172,10 +161,15 @@ ggplot(mapping = aes(x = x, y = y)) +
     
 ```
 
+- Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
+  - $P_L = P_H = P = \$6,000$
+- If buyers and sellers do not know the quality of the cars, all cars will be sold for the **same** price.
+
 
 ## Market Equilibrium with Asymmetric Information
 - Now let's assume that sellers know the quality of their cars but buyers do not.
-- In this example, Expected willingness to pay is higher than willingness to accept in both markets.
+- In this example, expected willingness to pay is higher than willingness to accept in both markets.
+  - $\$6,000 > WTA_H = \$5,000$ and  $\$6,000 > WTA_L = \$3,000$
 - Equilibrium is the same as before:
   - 2,000 cars are sold (1,000 H and 1,000 L)
   - $P_L = P_H = P = \$6,000$
@@ -197,8 +191,8 @@ ggplot(mapping = aes(x = x, y = y)) +
 - This simple example is based on a paper published by George Akerlof in the Quarterly Journal of Economics (QJE), in 1970.
 
 - Before being accepted at QJE, Akerlof faced some rejections along the way:
-  - AER and RESTUD "*did not publish papers on topics of such triviality.*
-  - JPE: *if this paper was correct, economics would be different.*
+  - AER and RESTUD "*did not publish papers on topics of such triviality.*"
+  - JPE: "*if this paper was correct, economics would be different.*"
 </div>
 
 <div class='right' style='float:right;width:48%'>
@@ -227,7 +221,6 @@ ggplot(mapping = aes(x = x, y = y)) +
 ## Reducing Adverse Selection 
 - An uninformed person may engage in **screening** to determine information held by informed people (e.g. test-driving a car)
 - Signaling: An informed party may engage in **signaling** to send information to a less-informed person (e.g. firm distributing favorable report on its product by an independent testing agency, warranty, etc.)
-- Some organizations publish expert **third-party information** about brands (e.g. Consumer Reports)
 
 ## Laws and Policies to Prevent Opportunism
 - Disclosure laws
@@ -238,44 +231,65 @@ ggplot(mapping = aes(x = x, y = y)) +
   - Eliminate adverse selection in health insurance markets by government provision of health care to everyone
   
 ## Labor Market Applications
+<div class='left' style='float:left;width:48%'> 
 - What kinds of asymmetric information problems plague labor markets?
   - Prospective employees may have less information than firms do about working conditions.
   - Firms may have less information about potential employees’ abilities than potential workers do.
 - We'll see how signaling and screening can affect (positively or negatively) the welfare in labor markets.
+  - Let's assume that there are two types of workers in the market: H and L
+  - Firms are not able to distinguish between them
+</div>
 
+<div class='right' style='float:right;width:48%'>
+  ![](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/pam_quality_workers.jpeg)
+</div>
 
-## Spence's Signaling Model
+## Signaling
+
+- What types of signals can the workers send to their prospective employers to reveal their types?
+  - Add skills on C.V.
+  - Get a degree
+- We'll next briefly discuss both strategies.
+
+## Cheap Talk
+
+- Suppose that Cindy is in a job interview for one position in a firm.
+- She might be offered (or not) either a demanding or an undemanding job 
+- Cindy and the firm have the same goal: be assigned to the job according to her ability. 
+- The game below depicts this story:
+
+  - ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_work.png){width=60%}
+  
+## Cheap Talk
+
+- Now assume that Cindy wants a demanding job regardless of her ability (maybe because it gives her higher status?).
+- In this case, Cindy's and firm's goals are not aligned and cheap talk does not provide a credible signal.
+- The game below shows this situation.
+  - ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/cheap_talk_not_work.png){width=60%}
+- The firm knowing her incentives, evaluates their potential expected payoffs:
+  - $(0.5\times 2)+(0.5\times 1)=1.5$ if gives her the demanding job
+  - $(0.5\times 4)+(0.5\times 1)=2.5$ if gives her the undemanding job
+- If Cindy is H, this outcome might be **inefficient** because she might be better off with the demanding job.
+
+## Education as a Signal
+- Whenever cheap talk does not work, workers might need to send a more costly signal.
 - Education might serve as a signal to potential employers if H workers have a lower cost of obtaining a degree.
 - Assumptions of the Signaling Model:
   - Schooling provides no useful training and only serves as a signal (don't worry, this is an unrealistic assumption - I hope!!).
   - H workers are $\theta$ share of the workforce; L workers are $1-\theta$ share.
   - H workers are worth $w_h$ to the firm; L workers are worth $w_l$ and will pay workers these marginal products.
-  
-## Spence's Signaling Model
-- Two types of equilibria arise:
-  - Pooling equilibrium: dissimilar people are paid alike or behave alike.
-  - Separating equilibrium: dissimilar people are paid differently and behave differently
 
-## Separating Equilibrium
-- If $w_h - c > w_l$, it is advantageous to H workers to pay the cost of education and signal their ability.
+  
+## Education as a Signal
+- Without education, firms offer a single wage to all workers based on the expected product
+  - $\bar{w}=\theta w_h+(1-\theta)w_l$
+
+- If $w_h - c > \bar{w}$, it is advantageous to H workers to pay the cost of education and signal their ability.
 - Then, in equilibrium:
   - H workers payoff is $w_h - c$
   - L workers payoff is $w_l$.
-  - Firms break even because they pay the worker's productivity
-
-## Pooling Equilibrium
-- What are the conditions for the existence of a pooling equilibrium?
-- Firms pay workers the expected marginal product:
-  - $\bar{w}=\theta w_h+(1-\theta)w_l$
-- Then, the pooling equilibrium occurs if 
-  - $w_h-c<\bar{w}$
-- Equilibrium outcome
-  - Both H and L workers receive $\bar{w}$
-  - Firms break even (gains of paying lower wages to H are compensated by higher wages to L)
-
-## Examples
-- Suppose $w_h=\$40,000$, $w_l=\$20,000$, $c=\$15,000$.
-- Which type of equilibrium is possible?
+  - Firms break even because they pay the worker's marginal product
+- Skip the textbook's treatment (as well as Sections 18.3 and 18.4)
 
 ## Screening in Hiring
 - Firms screen prospective workers in various ways:
@@ -286,7 +300,7 @@ ggplot(mapping = aes(x = x, y = y)) +
 ## Statistical Discrimination
 - Some employers engage in *statistical discrimination*. 
   - Hiring based on the belief that people of a certain age, gender, race, religion, or ethnicity have a higher ability than others on average.
-- Statistical discrimination is "efficient", from a purely economic standpoint, but it is often unlawful.
+- Statistical discrimination is "efficient", from a purely economic standpoint, but it is often unlawful, not to mention unethical.
   - In the U.S., it is illegal in to make hiring, pay, or promotion decisions using a performance prediction that is based on race, sex, age or disability.
 - Statistical discrimination is difficult to detect, however, and so it is plausible that it occurs frequently despite the law.
 
@@ -307,15 +321,12 @@ names (otherwise holding constant resume characteristics)
   ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/resumes-results.jpeg){width=50%}
 </div>
 
-## Wrapping up
-
-- Skip section 18.3.
-
 ## Moral Hazard
 
-- The second type of inefficiency arising from asymmetric information is hidden action.
+- Opportunism characterized by an informed person’s taking advantage of a less-informed person through an **unobserved action**.
+- Examples?
   - Taxi driver overcharge customers by taking the longest route
-
+  - What else?
 
 ## Moral Hazard
 <div class='left' style='float:left;width:48%'>
@@ -352,7 +363,7 @@ names (otherwise holding constant resume characteristics)
 
 ## Credit Rationing
 
--Those with less wealth find it more difficult to provide equity or collateral. 
+- Those with less wealth find it more difficult to provide equity or collateral. 
   - Credit constrained: borrow on unfavorable terms compared with those with more wealth 
   - Credit-excluded: are refused loans entirely 
 
@@ -369,6 +380,10 @@ names (otherwise holding constant resume characteristics)
 <div class='right' style='float:right;width:48%'>
   ![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/redlining.png){width=85%}
 </div>
+
+## Morgage Denials
+
+![ ](/Users/henriquefonseca/Desktop/temp/Rmarkdown-practice/econ253/morgages.png){scale=70%}
 
 ## That's all, Folks!
 

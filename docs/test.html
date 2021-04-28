@@ -27,6 +27,7 @@
   <p class="author">
 Henrique Veras
   </p>
+  <p class="date">Part 17 (Chapters 18 and 19)</p>
 </div>
 <div id="asymmetric-information-and-adverse-selection" class="title-slide slide section level1">
 <h1>Asymmetric Information and Adverse Selection</h1>
@@ -48,20 +49,15 @@ Henrique Veras
 <li>Payoffs in Prisoner’s dilemma, etc.</li>
 </ul></li>
 </ul>
-</div>
-<div id="example" class="slide section level2">
-<h1>Example</h1>
-<ul class="incremental">
-<li>Why do people accept working in dangerous jobs?
-<ul class="incremental">
-<li>Higher wages to compensate risk?</li>
-</ul></li>
-<li>Evidence of wage differentials across industries</li>
-<li>However we do not see differences across firms in the same industry.
-<ul class="incremental">
-<li>Prospective employees often do not know the injury rates at individual firms but may know the <strong>average</strong> injury rate over an entire industry.</li>
-</ul></li>
-</ul>
+<!---
+## Example
+
+- Why do people accept working in dangerous jobs?
+  - Higher wages to compensate risk?
+- Evidence of wage differentials across industries
+- However we do not see differences across firms in the same industry.
+  - Prospective employees often do not know the injury rates at individual firms but may know the **average** injury rate over an entire industry.
+-->
 </div>
 <div id="problems-due-to-asymmetric-information" class="slide section level2">
 <h1>Problems Due to Asymmetric Information</h1>
@@ -79,6 +75,7 @@ Henrique Veras
 <div id="adverse-selection" class="slide section level2">
 <h1>Adverse selection</h1>
 <ul class="incremental">
+<li>Let’s focus on the issue of adverse selection now.</li>
 <li>Opportunism characterized by an informed person’s benefitting from trading with a less-informed person who doesn’t know about an <strong>unobserved characteristic</strong> of the informed person.</li>
 <li>Examples?
 <ul class="incremental">
@@ -87,21 +84,9 @@ Henrique Veras
 </ul></li>
 </ul>
 </div>
-<div id="moral-hazard" class="slide section level2">
-<h1>Moral Hazard</h1>
-<ul class="incremental">
-<li>Opportunism characterized by an informed person’s taking advantage of a less-informed person through an <strong>unobserved action</strong>.</li>
-<li>Examples?
-<ul class="incremental">
-<li>Insured people may engage in risky behaviors that increase the probability of claims against the insurance company.</li>
-<li>What else?</li>
-</ul></li>
-</ul>
-</div>
 <div id="an-example-of-adverse-selection-if-he-wants-to-sell-that-horse-do-i-really-want-to-buy-it" class="slide section level2">
 <h1>An Example of Adverse Selection | “If he wants to <em>sell</em> that horse, do I really want to <em>buy</em> it?”</h1>
 <ul class="incremental">
-<li><p>Let’s focus on the issue of adverse selection now.</p></li>
 <li><p>Consider the market for used cars.</p>
 <p><img src="corolla-new-old.png" /></p></li>
 </ul>
@@ -138,7 +123,7 @@ Henrique Veras
 </ul>
 <p><img src="test_files/figure-slidy/ggplot2-1.png" width="50%" /><img src="test_files/figure-slidy/ggplot2-2.png" width="50%" /></p>
 <ul class="incremental">
-<li>Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
+<li>Equilibrium: 2,000 cars are sold (1,000 L and 1,000 H)
 <ul class="incremental">
 <li><span class="math inline">\(P_L = 4,000\)</span> and <span class="math inline">\(P_H = 8,000\)</span></li>
 </ul></li>
@@ -148,7 +133,6 @@ Henrique Veras
 <h1>Market Equilibrium with Symmetric Information</h1>
 <ul class="incremental">
 <li>Situation 2: Buyers and sellers have limited information</li>
-<li>If buyers and sellers do not know the quality of the cars, all cars will be sold for the <strong>same</strong> price.</li>
 <li>Assume <strong>risk neutrality</strong>.</li>
 </ul>
 </div>
@@ -174,8 +158,6 @@ Henrique Veras
 <div id="back-to-the-equilibrium" class="slide section level2">
 <h1>Back to the Equilibrium</h1>
 <ul class="incremental">
-<li>Situation 2: Buyers and sellers have limited information</li>
-<li>If buyers and sellers do not know the quality of the cars, all cars will be sold for the <strong>same</strong> price.</li>
 <li>Assume <strong>risk neutrality</strong>.</li>
 <li>Then, buyers will be willing to pay <em>at most</em>:
 <ul class="incremental">
@@ -185,22 +167,27 @@ Henrique Veras
 <ul class="incremental">
 <li><span class="math inline">\((\$3,000 \times 0.5) + (\$5,000 \times 0.5) = \$4,000\)</span></li>
 </ul></li>
-<li>Since sellers also do not know the value of their cars, they accept the deal.</li>
-<li>Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
-<ul class="incremental">
-<li><span class="math inline">\(P_L = P_H = P = \$6,000\)</span></li>
-</ul></li>
 </ul>
 </div>
 <div id="graphical-solution" class="slide section level2">
 <h1>Graphical Solution</h1>
 <p><img src="test_files/figure-slidy/unnamed-chunk-1-1.png" width="50%" /><img src="test_files/figure-slidy/unnamed-chunk-1-2.png" width="50%" /></p>
+<ul class="incremental">
+<li>Equilibrium: 2,000 cars are sold (1,000 H and 1,000 L)
+<ul class="incremental">
+<li><span class="math inline">\(P_L = P_H = P = \$6,000\)</span></li>
+</ul></li>
+<li>If buyers and sellers do not know the quality of the cars, all cars will be sold for the <strong>same</strong> price.</li>
+</ul>
 </div>
 <div id="market-equilibrium-with-asymmetric-information" class="slide section level2">
 <h1>Market Equilibrium with Asymmetric Information</h1>
 <ul class="incremental">
 <li>Now let’s assume that sellers know the quality of their cars but buyers do not.</li>
-<li>In this example, Expected willingness to pay is higher than willingness to accept in both markets.</li>
+<li>In this example, expected willingness to pay is higher than willingness to accept in both markets.
+<ul class="incremental">
+<li><span class="math inline">\(\$6,000 &gt; WTA_H = \$5,000\)</span> and <span class="math inline">\(\$6,000 &gt; WTA_L = \$3,000\)</span></li>
+</ul></li>
 <li>Equilibrium is the same as before:
 <ul class="incremental">
 <li>2,000 cars are sold (1,000 H and 1,000 L)</li>
@@ -235,8 +222,8 @@ Henrique Veras
 <li><p>This simple example is based on a paper published by George Akerlof in the Quarterly Journal of Economics (QJE), in 1970.</p></li>
 <li><p>Before being accepted at QJE, Akerlof faced some rejections along the way:</p>
 <ul class="incremental">
-<li>AER and RESTUD "<em>did not publish papers on topics of such triviality.</em></li>
-<li>JPE: <em>if this paper was correct, economics would be different.</em></li>
+<li>AER and RESTUD “<em>did not publish papers on topics of such triviality.</em>”</li>
+<li>JPE: “<em>if this paper was correct, economics would be different.</em>”</li>
 </ul></li>
 </ul>
 </div>
@@ -244,7 +231,7 @@ Henrique Veras
 <p><img src="lemons-paper.gif" /></p>
 </div>
 </div>
-<div id="example-1" class="slide section level2">
+<div id="example" class="slide section level2">
 <h1>Example</h1>
 <ul class="incremental">
 <li><p>The figure below shows the market for (used and new) cars in a given town. Suppose that there are 1,000 car owners (10% used and 90% new).</p>
@@ -269,7 +256,6 @@ Henrique Veras
 <ul class="incremental">
 <li>An uninformed person may engage in <strong>screening</strong> to determine information held by informed people (e.g. test-driving a car)</li>
 <li>Signaling: An informed party may engage in <strong>signaling</strong> to send information to a less-informed person (e.g. firm distributing favorable report on its product by an independent testing agency, warranty, etc.)</li>
-<li>Some organizations publish expert <strong>third-party information</strong> about brands (e.g. Consumer Reports)</li>
 </ul>
 </div>
 <div id="laws-and-policies-to-prevent-opportunism" class="slide section level2">
@@ -291,18 +277,68 @@ Henrique Veras
 </div>
 <div id="labor-market-applications" class="slide section level2">
 <h1>Labor Market Applications</h1>
+<div class="left" style="float:left;width:48%">
 <ul class="incremental">
 <li>What kinds of asymmetric information problems plague labor markets?
 <ul class="incremental">
 <li>Prospective employees may have less information than firms do about working conditions.</li>
 <li>Firms may have less information about potential employees’ abilities than potential workers do.</li>
 </ul></li>
-<li>We’ll see how signaling and screening can affect (positively or negatively) the welfare in labor markets.</li>
+<li>We’ll see how signaling and screening can affect (positively or negatively) the welfare in labor markets.
+<ul class="incremental">
+<li>Let’s assume that there are two types of workers in the market: H and L</li>
+<li>Firms are not able to distinguish between them</li>
+</ul></li>
 </ul>
 </div>
-<div id="spences-signaling-model" class="slide section level2">
-<h1>Spence’s Signaling Model</h1>
+<div class="right" style="float:right;width:48%">
+<p><img src="pam_quality_workers.jpeg" /></p>
+</div>
+</div>
+<div id="signaling" class="slide section level2">
+<h1>Signaling</h1>
 <ul class="incremental">
+<li>What types of signals can the workers send to their prospective employers to reveal their types?
+<ul class="incremental">
+<li>Add skills on C.V.</li>
+<li>Get a degree</li>
+</ul></li>
+<li>We’ll next briefly discuss both strategies.</li>
+</ul>
+</div>
+<div id="cheap-talk" class="slide section level2">
+<h1>Cheap Talk</h1>
+<ul class="incremental">
+<li><p>Suppose that Cindy is in a job interview for one position in a firm.</p></li>
+<li><p>She might be offered (or not) either a demanding or an undemanding job</p></li>
+<li><p>Cindy and the firm have the same goal: be assigned to the job according to her ability.</p></li>
+<li><p>The game below depicts this story:</p>
+<ul class="incremental">
+<li><img src="cheap_talk_work.png" style="width:60.0%" /></li>
+</ul></li>
+</ul>
+</div>
+<div id="cheap-talk-1" class="slide section level2">
+<h1>Cheap Talk</h1>
+<ul class="incremental">
+<li>Now assume that Cindy wants a demanding job regardless of her ability (maybe because it gives her higher status?).</li>
+<li>In this case, Cindy’s and firm’s goals are not aligned and cheap talk does not provide a credible signal.</li>
+<li>The game below shows this situation.
+<ul class="incremental">
+<li><img src="cheap_talk_not_work.png" style="width:60.0%" /></li>
+</ul></li>
+<li>The firm knowing her incentives, evaluates their potential expected payoffs:
+<ul class="incremental">
+<li><span class="math inline">\((0.5\times 2)+(0.5\times 1)=1.5\)</span> if gives her the demanding job</li>
+<li><span class="math inline">\((0.5\times 4)+(0.5\times 1)=2.5\)</span> if gives her the undemanding job</li>
+</ul></li>
+<li>If Cindy is H, this outcome might be <strong>inefficient</strong> because she might be better off with the demanding job.</li>
+</ul>
+</div>
+<div id="education-as-a-signal" class="slide section level2">
+<h1>Education as a Signal</h1>
+<ul class="incremental">
+<li>Whenever cheap talk does not work, workers might need to send a more costly signal.</li>
 <li>Education might serve as a signal to potential employers if H workers have a lower cost of obtaining a degree.</li>
 <li>Assumptions of the Signaling Model:
 <ul class="incremental">
@@ -312,52 +348,21 @@ Henrique Veras
 </ul></li>
 </ul>
 </div>
-<div id="spences-signaling-model-1" class="slide section level2">
-<h1>Spence’s Signaling Model</h1>
+<div id="education-as-a-signal-1" class="slide section level2">
+<h1>Education as a Signal</h1>
 <ul class="incremental">
-<li>Two types of equilibria arise:
+<li>Without education, firms offer a single wage to all workers based on the expected product
 <ul class="incremental">
-<li>Pooling equilibrium: dissimilar people are paid alike or behave alike.</li>
-<li>Separating equilibrium: dissimilar people are paid differently and behave differently</li>
+<li><span class="math inline">\(\bar{w}=\theta w_h+(1-\theta)w_l\)</span></li>
 </ul></li>
-</ul>
-</div>
-<div id="separating-equilibrium" class="slide section level2">
-<h1>Separating Equilibrium</h1>
-<ul class="incremental">
-<li>If <span class="math inline">\(w_h - c &gt; w_l\)</span>, it is advantageous to H workers to pay the cost of education and signal their ability.</li>
+<li>If <span class="math inline">\(w_h - c &gt; \bar{w}\)</span>, it is advantageous to H workers to pay the cost of education and signal their ability.</li>
 <li>Then, in equilibrium:
 <ul class="incremental">
 <li>H workers payoff is <span class="math inline">\(w_h - c\)</span></li>
 <li>L workers payoff is <span class="math inline">\(w_l\)</span>.</li>
-<li>Firms break even because they pay the worker’s productivity</li>
+<li>Firms break even because they pay the worker’s marginal product</li>
 </ul></li>
-</ul>
-</div>
-<div id="pooling-equilibrium" class="slide section level2">
-<h1>Pooling Equilibrium</h1>
-<ul class="incremental">
-<li>What are the conditions for the existence of a pooling equilibrium?</li>
-<li>Firms pay workers the expected marginal product:
-<ul class="incremental">
-<li><span class="math inline">\(\bar{w}=\theta w_h+(1-\theta)w_l\)</span></li>
-</ul></li>
-<li>Then, the pooling equilibrium occurs if
-<ul class="incremental">
-<li><span class="math inline">\(w_h-c&lt;\bar{w}\)</span></li>
-</ul></li>
-<li>Equilibrium outcome
-<ul class="incremental">
-<li>Both H and L workers receive <span class="math inline">\(\bar{w}\)</span></li>
-<li>Firms break even (gains of paying lower wages to H are compensated by higher wages to L)</li>
-</ul></li>
-</ul>
-</div>
-<div id="examples" class="slide section level2">
-<h1>Examples</h1>
-<ul class="incremental">
-<li>Suppose <span class="math inline">\(w_h=\$40,000\)</span>, <span class="math inline">\(w_l=\$20,000\)</span>, <span class="math inline">\(c=\$15,000\)</span>.</li>
-<li>Which type of equilibrium is possible?</li>
+<li>Skip the textbook’s treatment (as well as Sections 18.3 and 18.4)</li>
 </ul>
 </div>
 <div id="screening-in-hiring" class="slide section level2">
@@ -380,7 +385,7 @@ Henrique Veras
 <ul class="incremental">
 <li>Hiring based on the belief that people of a certain age, gender, race, religion, or ethnicity have a higher ability than others on average.</li>
 </ul></li>
-<li>Statistical discrimination is “efficient”, from a purely economic standpoint, but it is often unlawful.
+<li>Statistical discrimination is “efficient”, from a purely economic standpoint, but it is often unlawful, not to mention unethical.
 <ul class="incremental">
 <li>In the U.S., it is illegal in to make hiring, pay, or promotion decisions using a performance prediction that is based on race, sex, age or disability.</li>
 </ul></li>
@@ -401,22 +406,18 @@ Henrique Veras
 <p><img src="resumes-results.jpeg" style="width:50.0%" /></p>
 </div>
 </div>
-<div id="wrapping-up" class="slide section level2">
-<h1>Wrapping up</h1>
-<ul class="incremental">
-<li>Skip section 18.3.</li>
-</ul>
-</div>
-<div id="moral-hazard-1" class="slide section level2">
+<div id="moral-hazard" class="slide section level2">
 <h1>Moral Hazard</h1>
 <ul class="incremental">
-<li>The second type of inefficiency arising from asymmetric information is hidden action.
+<li>Opportunism characterized by an informed person’s taking advantage of a less-informed person through an <strong>unobserved action</strong>.</li>
+<li>Examples?
 <ul class="incremental">
 <li>Taxi driver overcharge customers by taking the longest route</li>
+<li>What else?</li>
 </ul></li>
 </ul>
 </div>
-<div id="moral-hazard-2" class="slide section level2">
+<div id="moral-hazard-1" class="slide section level2">
 <h1>Moral Hazard</h1>
 <div class="left" style="float:left;width:48%">
 <ul class="incremental">
@@ -463,7 +464,13 @@ Henrique Veras
 </div>
 <div id="credit-rationing" class="slide section level2">
 <h1>Credit Rationing</h1>
-<p>-Those with less wealth find it more difficult to provide equity or collateral. - Credit constrained: borrow on unfavorable terms compared with those with more wealth - Credit-excluded: are refused loans entirely</p>
+<ul class="incremental">
+<li>Those with less wealth find it more difficult to provide equity or collateral.
+<ul class="incremental">
+<li>Credit constrained: borrow on unfavorable terms compared with those with more wealth</li>
+<li>Credit-excluded: are refused loans entirely</li>
+</ul></li>
+</ul>
 </div>
 <div id="redlining" class="slide section level2">
 <h1>Redlining</h1>
@@ -481,6 +488,10 @@ Henrique Veras
 <div class="right" style="float:right;width:48%">
 <p><img src="redlining.png" style="width:85.0%" /></p>
 </div>
+</div>
+<div id="morgage-denials" class="slide section level2">
+<h1>Morgage Denials</h1>
+<p><img src="morgages.png" scale="70%" /></p>
 </div>
 <div id="thats-all-folks" class="slide section level2">
 <h1>That’s all, Folks!</h1>
